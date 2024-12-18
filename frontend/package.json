@@ -1,0 +1,24 @@
+{
+  "name": "cypresscucumber",
+  "version": "2.0.0",
+  "description": "Cucumber framwork in Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
+  },
+  "keywords": [
+    "cypress"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^21.0.3",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.4",
+    "@cucumber/cucumber": "^11.1.1",
+    "cypress": "^13.16.1",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "esbuild": "^0.24.0"
+  }
+}
