@@ -1,4 +1,5 @@
-Feature: Example Test
+Feature: step_definitions validation
+   
   Scenario: Check Google Homepage
     Given I open the Google homepage
-    Then I see the Google logo
+    Then The page title should be "Google"

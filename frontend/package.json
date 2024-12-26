@@ -1,4 +1,4 @@
-{
+ {
   "name": "cypresscucumber",
   "version": "2.0.0",
   "description": "Cucumber framwork in Cypress",
@@ -20,5 +20,9 @@
     "cypress": "^13.16.1",
     "cypress-cucumber-preprocessor": "^4.3.1",
     "esbuild": "^0.24.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "stepDefinitions": "cypress/e2e/step_definitions"
   }
 }
