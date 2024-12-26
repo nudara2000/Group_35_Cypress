@@ -1,9 +1,10 @@
-import { Given, Then } from "@badeball/cypress-cucumber-preprocessor";
+import { Given, Then } from "cypress-cucumber-preprocessor/steps";
 
-Given("I open the Google homepage", () => {
-  cy.visit("https://www.google.com");
+Given('I open the Google homepage', () => {
+  cy.visit('https://www.google.com');
 });
 
-Then("I see the Google logo", () => {
-  cy.get("img[alt='Google']").should("be.visible");
+Then('The page title should be {string}', (expectedTitle) => {
+  console.log("Expected title:", expectedTitle); // Debugging log
+  cy.title().should('eq', expectedTitle); 
 });
