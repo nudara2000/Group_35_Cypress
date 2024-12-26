@@ -6,17 +6,10 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   e2e: {
+    baseUrl: 'https://www.saucedemo.com',
+    specPattern: "**/*.feature",
     setupNodeEvents(on, config) {
-      on("file:preprocessor", cucumber())
-      return config;
+      on("file:preprocessor", cucumber());
     },
-    specPattern: "cypress/e2e/features/*.feature",
-      // const bundler = createBundler({
-      //   plugins: [createEsbuildPlugin(config)],
-      // });
-      // on("file:preprocessor", bundler);
-      // await addCucumberPreprocessorPlugin(on, config);
-      // return config;
-    
   },
 });
