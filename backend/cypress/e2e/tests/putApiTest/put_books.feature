@@ -36,3 +36,25 @@ Feature: Update a Book
       | id    | title             | author          |
       | 1     | Updated Book      | Updated Author  |
     Then the response status code should be 401
+
+Scenario: Attempt to update a book with invalid authorization 
+    Given the user is authenticated as "user" with password "password"
+    When the user sends a PUT request to "/api/books/1" with:
+      | id    | title             | author          |
+      | 1     | Updated Book      | Updated Author  |
+    Then the response status code should be 403
+      And the response body should contain "User is not permitted"
+
+  Scenario: Attempt to update a book with mismatched ID 
+    When the user sends a PUT request to "/api/books/1" with:
+      | id    | title             | author          |
+      | 2     | Mismatched Book   | Unknown Author  |
+    Then the response status code should be 400
+    And the response body should contain "Book id is not matched"
+
+  Scenario: Attempt to update a book with missing parameters
+    When the user sends a PUT request to "/api/books/1" with:
+      | id    | title             | author          |
+      | 1     |                   |                 |
+    Then the response status code should be 400 due to missing parameters
+    And the response body should contain "Missing mandatory parameters"

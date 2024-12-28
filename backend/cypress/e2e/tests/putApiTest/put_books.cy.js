@@ -18,7 +18,9 @@ Given('a book exists with ID {int}', (id) => {
         url: `${baseUrl}/api/books`,
         headers: authHeader,
         body: {id, title: "Sample Book", author: "Sample Author"},
-    }).its('status').should('be.oneOf', [201, 208]);
+    })
+    .its('status')
+    .should('be.oneOf', [201, 208]);
 });
 
 When('the user sends a PUT request to {string} with:', (path, dataTable) => {
@@ -34,7 +36,6 @@ When('the user sends a PUT request to {string} with:', (path, dataTable) => {
             author: data.author,
         },
     }).as('response');
-
 });
 
 Then('the response status code should be {int}', (statusCode) => {
@@ -53,3 +54,13 @@ Then('the response should include:', (dataTable) => {
 Then('the response body should contain {string}', (message) => {
     cy.get('@response').its('body').should('include', message);
 });
+
+Then(
+  "the response status code should be {int} due to missing parameters",
+  (statusCode) => {
+    cy.get("@response").its("status").should("eq", statusCode);
+    cy.get("@response")
+      .its("body")
+      .should("include", "Missing mandatory parameters");
+  }
+);
