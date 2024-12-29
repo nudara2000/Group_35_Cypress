@@ -12,4 +12,5 @@ module.exports = defineConfig({
       on("file:preprocessor", cucumber());
     },
   },
+  chromeWebSecurity: false,
 });
