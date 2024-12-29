@@ -1,15 +1,10 @@
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
 import Inventory from "../../Pages/inventoryPage/InventoryPage.cy";
 import Overview from "../../Pages/OverviewPage/OverviewPage.cy";
-import login from "../../Pages/LoginPage/LoginPage.cy";
 import confirm from "../../Pages/ConfirmPage/ConfirmPage.cy";
 
-
 Given('the user is logged in', () => {
-    login.enterUrl();
-    login.enterStandardUsernamePassword("standard_user", "secret_sauce");
-    login.clickLoginButton();
-    login.verifyPagetitle();
+    cy.login('standard_user', 'secret_sauce');
 });
 
 Given('the user goes to the cart page', () => {
