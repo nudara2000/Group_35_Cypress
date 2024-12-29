@@ -48,7 +48,7 @@ Feature: Checkout Overview Testing
     And the user should see the item description for Item 2
     And the user should see the item price "$9.99" for Item 2
     And the user should see the item quantity "1" for Item 2
-    And the user should see the item title "Sauce Labs Bolt T-Shirt" for item 3
+    And the user should see the item title "Sauce Labs Fleece Jacket" for item 3
     And the user should see the item description for Item 3
     And the user should see the item price "$49.99" for Item 3
     And the user should see the item quantity "1" for Item 3
