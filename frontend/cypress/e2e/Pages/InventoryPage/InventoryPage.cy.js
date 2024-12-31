@@ -2,6 +2,10 @@ const baseUrl = Cypress.config("baseUrl");
 
 class InventoryPage {
 
+  navigateToProductPageFail() {
+    cy.visit(baseUrl+'/inventory.html',{failOnStatusCode: false});
+  }
+
   navigateToCart() {
     cy.get('.shopping_cart_link').click();
   }
