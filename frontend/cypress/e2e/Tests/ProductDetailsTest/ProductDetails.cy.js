@@ -23,6 +23,11 @@ Then('User should be able to view the hamburger menu' , () => {
   Then("User should be able to view the cart icon", () => {
     cy.get('.shopping_cart_link').should("be.visible"); 
   });
+  
+  Then("User should be able to view the {string} button", (buttonText) => {
+    cy.contains("button", buttonText).should("be.visible");
+  });
+  
   Then("User should be able to view the product image", () => {
     cy.get('.inventory_details_img').should('be.visible');
   });
