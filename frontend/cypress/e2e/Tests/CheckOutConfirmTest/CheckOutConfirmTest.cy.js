@@ -1,5 +1,6 @@
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
-import Inventory from "../../Pages/inventoryPage/InventoryPage.cy";
+const Inventory = require('../../Pages/inventoryPage/InventoryPage.cy'); // Check this path
+
 import confirm from "../../Pages/ConfirmPage/ConfirmPage.cy";
 import overview from "../../Pages/OverviewPage/OverviewPage.cy";
 
