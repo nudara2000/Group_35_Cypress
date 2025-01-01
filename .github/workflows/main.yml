@@ -1,31 +1,28 @@
 name: Cypress Tests
 
-# This workflow runs whenever there is a push to the repository.
-on: 
-  push
+on: push
 
 jobs:
-  # Define a single job named 'cypress-run' to execute the Cypress tests.
   cypress-run:
-    # Specify the environment where the job will run. Ubuntu 24.04 is being used here.
-    runs-on: ubuntu-24.04
-
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        # This step checks out the repository code so it can be used in subsequent steps.
         uses: actions/checkout@v4
 
+      - name: Debug Files
+        run: ls -R
+        working-directory: frontend
+
+      - name: Clear Cypress Cache
+        run: npx cypress cache clear
+        working-directory: frontend
+
       - name: Install dependencies
-        # This step installs the Node.js dependencies required for Cypress tests.
-        # The `working-directory` specifies the folder containing the Cypress project (`cypress-cucumber`).
         run: npm install
         working-directory: frontend
 
-      - name: Cypress run
-        # This step uses the official Cypress GitHub Action to execute the tests.
+      - name: Run Cypress Tests
         uses: cypress-io/github-action@v6
         with:
-          # Specifies the command to start the Cypress tests. The 'npm run test' command is executed.
           start: npm run test
-          # Specifies the folder containing the Cypress project (`cypress-cucumber`).
           working-directory: frontend
