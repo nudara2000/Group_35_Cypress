@@ -1,0 +1,67 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - pielineTest
+  pull_request:
+    branches:
+      - pielineTest
+
+jobs:
+  frontend-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16
+
+    - name: Install Frontend Dependencies
+      run: |
+        cd frontend
+        npm install
+
+    - name: Run Frontend Tests
+      run: |
+        cd frontend
+        npm test
+
+  backend-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16
+
+    - name: Install Backend Dependencies
+      run: |
+        cd backend
+        npm install
+
+    - name: Start Backend Service
+      run: |
+        java -jar backend/service.jar &
+      working-directory: backend
+
+    - name: Wait for Service to Start
+      run: |
+        sleep 15 # Adjust the wait time based on how long the service takes to start.
+
+    - name: Run Backend Tests
+      run: |
+        cd backend
+        npm test
+
+    - name: Stop Backend Service
+      run: |
+          pkill -f 'java -jar backend/service.jar'
