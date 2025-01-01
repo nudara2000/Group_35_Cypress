@@ -17,7 +17,7 @@ jobs:
 
       - name: Install dependencies
         # This step installs the Node.js dependencies required for Cypress tests.
-        # The `working-directory` specifies the folder containing the Cypress project (`cypress-cucumber`).
+        # The `working-directory` specifies the folder containing the Cypress project (`frontend`).
         run: npm install
         working-directory: frontend
 
@@ -27,5 +27,5 @@ jobs:
         with:
           # Specifies the command to start the Cypress tests. The 'npm run test' command is executed.
           start: npm run test
-          # Specifies the folder containing the Cypress project (`cypress-cucumber`).
+          # Specifies the folder containing the Cypress project (`frontend`).
           working-directory: frontend
