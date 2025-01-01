@@ -1,5 +1,6 @@
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
 import Inventory from "../../Pages/inventoryPage/InventoryPage.cy";
+import checkout from "../../Pages/CheckoutPage/CheckoutPage.cy";
 
 Given('the user is logged in', () => {
     cy.login('standard_user', 'secret_sauce');
@@ -46,8 +47,8 @@ When('the user proceeds to checkout overview with missing first name', () => {
     cy.get('input[value="Continue"]').click();
 });
 
-Then('the user should see the following error message', () => {
-    cy.contains('div', row['Error'], { timeout: 10000 }).should('be.visible');
+Then('the user should see the following error message1', () => {
+    checkout.verifyFormValidationError("Error: First Name is required");
 });
 
 // Scenario: Missing Last Name
@@ -59,12 +60,8 @@ When('the user proceeds to checkout overview with missing last name', () => {
     cy.get('input[value="Continue"]').click();
 });
 
-Then('the user should see the following error message', (dataTable) => {
-    dataTable.hashes().forEach(row => {
-        // Ensure that the error message is visible before checking the text
-        cy.get('.error-message', { timeout: 10000 }).should('be.visible'); // Adjust the selector and timeout if needed
-        cy.get('.error-message').should('contain.text');
-    });
+Then('the user should see the following error message2', () => {
+    checkout.verifyFormValidationError("Error: Last Name is required");
 });
 
 // Scenario: Missing Postal Code
@@ -76,8 +73,8 @@ When('the user proceeds to checkout overview with missing postal code', () => {
     cy.get('input[value="Continue"]').click();
 });
 
-Then('the user should see the following error message for postal code', () => {
-    cy.get('.error-message').should('contain.text', 'Error: Postal Code is required');
+Then('the user should see the following error message3', () => {
+    checkout.verifyFormValidationError("Error: Postal Code is required");
 });
 
 // Scenario: Invalid Postal Code
@@ -89,6 +86,16 @@ When('the user proceeds to checkout overview with invalid postal code', () => {
     cy.get('input[value="Continue"]').click();
 });
 
-Then('the user should see the following error message for invalid postal code', () => {
-    cy.get('.error-message').should('contain.text', 'Error: Postal Code must be numeric.');
+Then('the user should see the following error message4', () => {
+    checkout.verifyFormValidationError('Error: Postal Code is invalid');
+});
+
+// Scenario: Cancel Checkout
+When('the user clicks the cancel button on the "Checkout: Your Information" page', () => {
+    cy.contains('button', 'Checkout').click(); 
+    cy.get('.cart_cancel_link').click();      
+});
+
+Then('the user should be navigated back to the cart page', () => {
+    cy.url().should('include', '/cart.html'); 
 });
