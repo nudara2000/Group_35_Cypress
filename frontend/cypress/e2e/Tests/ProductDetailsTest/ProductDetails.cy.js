@@ -3,13 +3,18 @@ import login from '../../Pages/LoginPage/LoginPage.cy';
 
 Given('User logs in to the application', () => {
     login.enterUrl();
-    login.enterStandardUsernamePassword('standard_user', 'secret_sauce');
+    login.enterStandardUsernamePassword('problem_user', 'secret_sauce');
     login.clickLoginButton();
 });
 
-When('User selects an item from the product list' , () => {
-    cy.get('.inventory_item .inventory_item_name').should('exist'); // Ensure element is present
+When('User selects the item from the product list' , function () {
+    cy.get('.inventory_item .inventory_item_name').should('exist'); 
+    cy.get('.inventory_item .inventory_item_name').first().invoke('text').as('selectedProductTitle');
     cy.get('.inventory_item .inventory_item_name').first().click();
+});
+
+Then('The correct product details page should open' , function () {
+    cy.get ('.inventory_details_name').should('have.text', this.selectedProductTitle.trim());
 });
 
 Then('User should be able to view the hamburger menu' , () => {

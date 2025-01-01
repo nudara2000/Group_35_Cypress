@@ -2,8 +2,9 @@ Feature: After Selecting an item from the product list, the user should be able 
 
 Background:
     Given User logs in to the application 
-    When User selects an item from the product list
-
+    When User selects the item from the product list
+    Then The correct product details page should open
+    
 Scenario: User should be able to view the product details page
     Then User should be able to view the hamburger menu
     And User should be able to view the page title
