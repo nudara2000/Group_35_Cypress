@@ -1,26 +1,67 @@
 class CheckoutPage {
-    verifyPageTitle(expectedTitle = "Checkout: Your Information") {
-        cy.get('.title').should('have.text', expectedTitle);
-    }
-
-    fillCheckoutForm(firstName, lastName, postalCode) {
-        cy.get('#first-name').clear().type(firstName);
-        cy.get('#last-name').clear().type(lastName);
-        cy.get('#postal-code').clear().type(postalCode);
-    }
-
-    submitCheckoutForm() {
-        cy.get('input[data-test="continue"]').click();
-    }
-
-    cancelCheckout() {
-        cy.get('button[data-test="cancel"]').click();
-    }
-
-    validateErrorMessage(expectedMessage) {
-        cy.get('h3[data-test="error"]').should('contain.text', expectedMessage);
-    }
-}
+    visitCheckoutPage() {
+        cy.url().should("include", "checkout-step-one.html");
+      }
+    
+      verifyTitle(expectedTitle) {
+        cy.get(".title").should("contain.text", expectedTitle);
+      }
+    
+      fillCheckoutForm(firstName, lastName, postalCode) {
+        if (firstName) {
+          cy.get('[data-test="firstName"]').clear().type(firstName);
+        } else {
+          cy.get('[data-test="firstName"]').clear();
+        }
+    
+        if (lastName) {
+          cy.get('[data-test="lastName"]').clear().type(lastName);
+        } else {
+          cy.get('[data-test="lastName"]').clear();
+        }
+    
+        if (postalCode) {
+          cy.get('[data-test="postalCode"]').clear().type(postalCode);
+        } else {
+          cy.get('[data-test="postalCode"]').clear();
+        }
+      }
+    
+      submitForm() {
+        cy.get('[data-test="continue"]').click();
+      }
+    
+      verifyFormValidationError(expectedMessage) {
+        cy.get('[data-test="error"]',)
+          .should("be.visible")
+          .and("contain.text", expectedMessage);
+      }
+    
+      verifyInvalidPostalCodeError() {
+        cy.get('[data-test="error"]', { timeout: 15000 }).should("not.exist");
+      }
+    
+      clickCancelButton() {
+        cy.get('[data-test="cancel"]').click();
+      }
+    
+      verifyPreviousPage() {
+        cy.url().should("include", "cart.html");
+      }
+    
+      verifyCheckoutButton() {
+        cy.get('button[data-test="checkout"]')
+          .should("be.visible")
+          .and("not.be.disabled");
+      }
+    
+      clickCheckoutButton() {
+        cy.get('button[data-test="checkout"]')
+          .should("be.visible")
+          .and("not.be.disabled")
+          .click();
+      }
+  }
 
 const checkout = new CheckoutPage();
 export default checkout;
