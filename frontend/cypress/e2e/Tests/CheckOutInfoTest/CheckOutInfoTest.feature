@@ -22,7 +22,7 @@ Feature: Checkout: Your Information Form Validation
       |--------------|--------|
       | Last Name    | Doe    |
       | Postal Code  | 12345  |
-    Then the user should see the following error message
+    Then the user should see the following error message1
     | Error                         |
     | Error: First Name is required |
 
@@ -32,7 +32,9 @@ Feature: Checkout: Your Information Form Validation
       |--------------|--------|
       | First Name   | John   |
       | Postal Code  | 12345  |
-    Then the user should see the following error message for last name
+    Then the user should see the following error message2
+    | Error                         |
+    | Error: Last Name is required  |
 
   Scenario: Missing Postal Code
     When the user proceeds to checkout overview with missing postal code
@@ -40,7 +42,10 @@ Feature: Checkout: Your Information Form Validation
       |--------------|--------|
       | First Name   | John   |
       | Last Name    | Doe    |
-    Then the user should see the following error message for postal code
+    Then the user should see the following error message3
+     | Error                         |
+     | Error: Last Name is required  |
+
 
   Scenario: Invalid Postal Code
     When the user proceeds to checkout overview with invalid postal code
@@ -49,4 +54,10 @@ Feature: Checkout: Your Information Form Validation
       | First Name   | John   |
       | Last Name    | Doe    |
       | Postal Code  | abcde  |
-    Then the user should see the following error message for invalid postal code
+    Then the user should see the following error message4
+     | Error                         |
+     | Error: Last Name is required  |
+
+    Scenario: Cancel the process
+    When the user clicks the cancel button on the "Checkout: Your Information" page
+    Then the user should be navigated back to the cart page
