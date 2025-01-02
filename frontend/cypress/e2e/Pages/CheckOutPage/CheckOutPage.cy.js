@@ -63,5 +63,4 @@ class CheckoutPage {
       }
   }
 
-const checkout = new CheckoutPage();
-export default checkout;
+export default CheckoutPage;
