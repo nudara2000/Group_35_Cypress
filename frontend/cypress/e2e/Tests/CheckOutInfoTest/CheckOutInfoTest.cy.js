@@ -1,6 +1,6 @@
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
-import Inventory from "../../Pages/inventoryPage/InventoryPage.cy";
-import checkout from "../../Pages/CheckoutPage/CheckoutPage.cy";
+import Inventory from "frontend/cypress/e2e/Pages/inventoryPage/InventoryPage.cy";
+import checkout from "frontend/cypress/e2e/Pages/CheckoutPage/CheckoutPage.cy";
 
 Given('the user is logged in', () => {
     cy.login('standard_user', 'secret_sauce');
