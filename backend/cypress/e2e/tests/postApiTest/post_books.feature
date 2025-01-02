@@ -37,3 +37,24 @@ Background:
     When User insert the book into the database
     Then the book should not be inserted into the database with the insert response 400
     And the response should be contain error message "Author is required"
+
+
+    Scenario: Inserting a book with invalid data type -title
+    Given User have a book with the invalid data type in title:
+      | id   | title                    | Author            |
+      | 07   | 233456788                | Charlotte Bronte  |
+    When User insert the book into the database with invalid data type
+    Then the book should not be inserted into the database with the insert response 400
+    And the response should be contain error message "Invalid Data Type. The Title field must be a String value"
+
+   Scenario: Inserting a book with invalid data type -id
+    Given User have a book with the invalid data type in id:
+      | id   | title            | Author          |
+      | "sdh"| "The Hunger Games" | Suzanne Collins |
+    When User insert the book into the database with invalid data type
+    Then the book should not be inserted into the database with the insert response 400
+    And the response should be contain error message "Invalid Data Type. The ID field must be a numeric value"
+
+  
+
+
