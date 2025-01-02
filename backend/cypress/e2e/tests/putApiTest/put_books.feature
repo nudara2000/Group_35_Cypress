@@ -58,3 +58,13 @@ Scenario: Attempt to update a book with invalid authorization
       | 1     |                  
     Then the response status code should be 400 
     And the response body should contain "Mandatory parameters should not be null"
+
+    
+  Scenario: Update a book with valid data types
+   Given the user is authenticated as "admin" with password "password"
+   When the user sends a PUT request to "/api/books/1" with:
+    | id    | title          | author         |
+    | 1     | Valid Title    | Valid Author   |
+   Then the response status code should be 200
+
+ 
