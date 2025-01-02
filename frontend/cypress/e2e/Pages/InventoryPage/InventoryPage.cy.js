@@ -78,5 +78,5 @@ sortByPriceDesc() {
 }
 
 }
-
-export default InventoryPage;
+const inventory = new InventoryPage();
+export default inventory;
