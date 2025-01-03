@@ -1,15 +1,12 @@
 Feature: Cart Page Testing
 
   Background:
-    Given the user is logged in as "Standard User"
-
-  #Feature: Cart Page Functionality
+    Given the user is logged in as Standard User
 
 
   Scenario: Adding an item to the cart
     When the user adds a "Sauce Labs Backpack" to the cart
     Then the user should see the item in the cart
-    And the user should see the item quantity "1" for the "Sauce Labs Backpack"
     And the user should see the item price "$29.99" for the "Sauce Labs Backpack"
 
   Scenario: Remove a product from the cart

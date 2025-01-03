@@ -27,6 +27,14 @@ class CartPage {
         });
     }
 
+    verifyItemPrice(itemName, expectedPrice) {
+      cy.get('.cart_item')
+          .contains(itemName)
+          .parents('.cart_item')
+          .find('.inventory_item_price')
+          .should('contain.text', expectedPrice);
+  }
+  
     verifyCartBadgeCount(expectedCount) {
       cy.get('.shopping_cart_badge').should('have.text', String(expectedCount));
     }
