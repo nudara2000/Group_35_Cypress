@@ -2,6 +2,10 @@ const baseUrl = Cypress.config("baseUrl");
 
 class InventoryPage {
 
+   navigateProductsPage() {
+    cy.url({timeout:10000}).should('eq', baseUrl+'/inventory.html');
+  }
+
   navigateToProductPageFail() {
     cy.visit(baseUrl+'/inventory.html',{failOnStatusCode: false});
   }
