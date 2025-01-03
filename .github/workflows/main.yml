@@ -8,12 +8,29 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18' # Replace with your Node.js version if different
+
       - name: Install dependencies
-        run: npm install
-        
-      - name: Cypress run
+        run: npm install # Run npm install at the root level
+
+      - name: Run frontend tests
         uses: cypress-io/github-action@v6
-        with:          
-          start: npm run test 
+        with:
+          start: npm run test
           working-directory: frontend
+          record: false
+          publish-summary: true
+          component: false
+
+      - name: Run backend tests
+        uses: cypress-io/github-action@v6
+        with:
+          start: npm run test
+          working-directory: backend
+          record: false
+          publish-summary: true
+          component: false
