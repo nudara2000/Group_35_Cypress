@@ -1,7 +1,7 @@
 Feature: Cart Page Testing
 
   Background:
-    Given the user is logged in as "Standard User"
+    Given the user is logged in as Standard User
 
   #Feature: Cart Page Functionality
 
