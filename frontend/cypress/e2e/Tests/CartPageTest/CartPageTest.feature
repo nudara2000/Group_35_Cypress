@@ -3,6 +3,7 @@ Feature: Cart Page Testing
   Background:
     Given the user is logged in as Standard User
 
+
   Scenario: Adding an item to the cart
     When the user adds a "Sauce Labs Backpack" to the cart
     Then the user should see the item in the cart
