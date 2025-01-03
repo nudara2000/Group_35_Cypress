@@ -15,7 +15,14 @@ class Books {
 
   getBooks() {
     return cy.request('GET', baseUrl + '/api/books');
-  }
+}
+  getBook(bookId) {
+    return cy.request({
+        method:'GET',
+        url: baseUrl + '/api/books/' + bookId,
+        failOnStatusCode: false
+        });
+}
 
   deleteBook(bookId) {
     return cy.request('DELETE', baseUrl + '/api/books/' + bookId);

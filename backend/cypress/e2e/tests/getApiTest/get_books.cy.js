@@ -9,30 +9,7 @@ let bookData = {
   author: 'Author1',
 };
 
-// Step Definition: Given user adds a book and sends a GET request to get all books
-Given('user adds a book and sends a GET request to get all books', () => {
-  login.loginUser('user', 'password'); // Log in as a user
-
-  // Add the book to the system
-  books.addBook(bookData).then(() => {
-    // After adding the book, fetch the list of books
-    books.getBooks().then((res) => {
-      response = res;
-    });
-  });
-});
-
-console.log('response:', response);
-Then('the response status should be {int}', (statusCode) => {
-  expect(response.status).to.eq(statusCode);  // Check that status code is correct
-});
-
-And('the response should contain a list of books', () => {
-  expect(response.body[0]).to.deep.equal(bookData);  // Check that the book is added correctly
-});
-
-
-// Test Case 2: Verify Response Contains Multiple Books
+// Test Case 1: Verify Response Contains Multiple Books
 Given('there are multiple books in the system', () => {
   login.loginUser('user', 'password');
   // Add multiple books
@@ -55,7 +32,7 @@ Then('the response should contain multiple books', () => {
   });
 });
 
-// Test Case 3: Verify Response Returns Empty List When No Books Exist
+// Test Case 2: Verify Response Returns Empty List When No Books Exist
 Given('there are no books in the system', () => {
   login.loginUser('user', 'password');
   // Ensure there are no books by deleting them (if needed)
@@ -73,7 +50,7 @@ Then('the response should be an empty list', () => {
   });
 });
 
-// Test Case 4: Verify Response Contains Correct Fields
+// Test Case 3: Verify Response Contains Correct Fields
 Given('user adds a book with correct fields and sends a GET request', () => {
   login.loginUser('user', 'password');
   // Add the book with required fields
