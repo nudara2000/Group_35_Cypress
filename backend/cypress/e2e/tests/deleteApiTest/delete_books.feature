@@ -14,12 +14,12 @@ Feature: DELETE API Tests
     And the response message should indicate the book was not found
 
   Scenario: Authorized admin deletes a book successfully
-    Given the user provides Basic Auth credentials with username "admin" and password "password"
+    Given the user is logged in as "Admin"
     When the user sends a DELETE request to remove a book with a valid ID
     Then the response status should be 200
 
   Scenario: Unauthorized user attempts to delete a book
-    Given the user provides Basic Auth credentials with username "user" and password "password"
+    Given the user is logged in as "User"
     When the user sends a DELETE request to remove a book with a valid ID
     Then the response status should be 403
     And the response message should indicate "User is not permitted."

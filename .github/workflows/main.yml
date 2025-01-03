@@ -4,25 +4,39 @@ on: push
 
 jobs:
   cypress-run:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Debug Files
-        run: ls -R
-        working-directory: frontend
-
-      - name: Clear Cypress Cache
-        run: npx cypress cache clear
-        working-directory: frontend
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18' # Replace with your project's Node.js version if different
 
       - name: Install dependencies
-        run: npm install
-        working-directory: frontend
+        run: npm install # Run npm install at the root level
 
-      - name: Run Cypress Tests
+      - name: Run frontend tests
         uses: cypress-io/github-action@v6
         with:
           start: npm run test
           working-directory: frontend
+          record: false
+          publish-summary: true
+          component: false
+        env:
+          CYPRESS_CACHE_FOLDER: /tmp/cypress-cache
+          NODE_OPTIONS: "--openssl-legacy-provider" # If your Node version needs it
+
+      - name: Run backend tests
+        uses: cypress-io/github-action@v6
+        with:
+          start: npm run test
+          working-directory: backend
+          record: false
+          publish-summary: true
+          component: false
+        env:
+          CYPRESS_CACHE_FOLDER: /tmp/cypress-cache
+          NODE_OPTIONS: "--openssl-legacy-provider" # If your Node version needs it
