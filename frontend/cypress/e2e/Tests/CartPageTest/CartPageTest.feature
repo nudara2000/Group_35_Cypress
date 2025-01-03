@@ -3,7 +3,7 @@ Feature: Cart Page Testing
   Background:
     Given the user is logged in as "Standard User"
 
-  Feature: Cart Page Functionality
+  #Feature: Cart Page Functionality
 
 
   Scenario: Adding an item to the cart

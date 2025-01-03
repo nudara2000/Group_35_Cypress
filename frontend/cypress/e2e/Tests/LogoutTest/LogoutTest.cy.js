@@ -1,7 +1,7 @@
 import {Given, When, Then, And} from "cypress-cucumber-preprocessor/steps"
 import login from '../../Pages/LoginPage/LoginPage.cy'
 import SideMenuBar from '../../Pages/sideMenuBar/SideMenuBar.cy'
-import InventoryPage from '../../Pages/InventoryPage/InventoryPage.cy'
+import InventoryPage from '../../Pages/inventoryPage/InventoryPage.cy'
 const sideMenuBar = new SideMenuBar();
 
 Given('User Logged in to the application', () => {

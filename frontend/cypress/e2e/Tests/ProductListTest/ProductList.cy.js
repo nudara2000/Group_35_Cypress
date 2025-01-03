@@ -1,6 +1,5 @@
 import { Given, When, Then, And } from "cypress-cucumber-preprocessor/steps";
 import login from '../../Pages/LoginPage/LoginPage.cy';
-import inventory from '../../Pages/InventoryPage/InventoryPage.cy';
 
 Given('User logs in to the application with username {string} and password {string}', (username,password)=> {
   login.enterUrl();

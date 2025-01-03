@@ -1,5 +1,5 @@
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
-import CartPage from "../../Pages/CartPage.cy";
+import CartPage from "../../Pages/CartPage/CartPage.cy";
 import InventoryPage from "../../Pages/inventoryPage/InventoryPage.cy";
 
 // Background step
