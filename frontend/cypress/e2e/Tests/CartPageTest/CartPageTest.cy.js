@@ -3,7 +3,7 @@ import CartPage from "../../Pages/CartPage/CartPage.cy";
 import Inventory from "../../Pages/inventoryPage/InventoryPage.cy";
 
 // Background step
-Given('the user is logged in', () => {
+Given('the user is logged in as Standard User', () => {
     cy.login('standard_user', 'secret_sauce');
 });
 
@@ -18,7 +18,6 @@ Then('the user should see the item in the cart', () => {
 });
 
 Then('the user should see the item price "$29.99" for the "Sauce Labs Backpack"', () => {
-    // Assuming verifyItemPrice method exists in CartPage
     CartPage.verifyItemPrice('Sauce Labs Backpack', '$29.99');
 });
 
@@ -26,9 +25,9 @@ Then('the user should see the item price "$29.99" for the "Sauce Labs Backpack"'
 Given('the user have added the following products to the cart:', (dataTable) => {
     const products = dataTable.rows().map(row => row[0]);
     products.forEach(product => {
-        InventoryPage.addItemToCart(product);
+        Inventory.addItemToCart(product);
     });
-    InventoryPage.navigateToCart();
+    Inventory.navigateToCart();
     CartPage.varifyProductsInCart(products);
 });
 
