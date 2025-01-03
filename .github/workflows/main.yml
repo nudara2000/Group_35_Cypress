@@ -12,7 +12,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18' # Replace with your Node.js version if different
+          node-version: '18' # Replace with your project's Node.js version if different
 
       - name: Install dependencies
         run: npm install # Run npm install at the root level
@@ -25,6 +25,9 @@ jobs:
           record: false
           publish-summary: true
           component: false
+        env:
+          CYPRESS_CACHE_FOLDER: /tmp/cypress-cache
+          NODE_OPTIONS: "--openssl-legacy-provider" # If your Node version needs it
 
       - name: Run backend tests
         uses: cypress-io/github-action@v6
@@ -34,3 +37,6 @@ jobs:
           record: false
           publish-summary: true
           component: false
+        env:
+          CYPRESS_CACHE_FOLDER: /tmp/cypress-cache
+          NODE_OPTIONS: "--openssl-legacy-provider" # If your Node version needs it
