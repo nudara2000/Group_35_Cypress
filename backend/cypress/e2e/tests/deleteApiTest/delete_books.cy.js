@@ -9,7 +9,7 @@ import books from '../../Common/books/books.cy';
 
 let response;
 let bookData = {
-    id: 1,
+    id: 2,
     title: 'Book1',
     author: 'Author1',
 };
@@ -19,18 +19,28 @@ Given('user is logged into the service', () => {
     login.loginUser('user', 'password');
 });
 
-// Scenario: User deletes an existing book
-Given('the user has posted a book with a valid ID', () => {
-    books.addBook(bookData).then(() => {
-        books.getBooks().then((res) => {
-            response = res;
+Given('four books exist', () => {
+    const bookList = [
+        { id: 1, title: 'Good Book', author: 'Author1' },
+        { id: 2, title: 'Better Book', author: 'Author2' }
+    ];
+
+    // Add each book to the list
+    bookList.forEach(book => {
+        books.addBook(bookData).then(() => {
+            books.getBooks().then((res) => {
+                response = res;
+            });
         });
     });
 });
-
+// Scenario: User deletes an existing book
 When('the user sends a DELETE request to remove a book with a valid ID', () => {
-    books.deleteBook(bookData.id).then((res) => {
-        response = res;
+    books.getBooks().then((res) => {
+        const highestId = Math.max(...res.body.map(book => book.id));
+        books.deleteBook(highestId).then((deleteRes) => {
+            response = deleteRes;
+        });
     });
 });
 
@@ -57,7 +67,7 @@ Then('the response status should be 404', () => {
 });
 
 And('the response message should indicate the book was not found', () => {
-    expect(response.body.message).to.contain('Book not found');
+    expect(response.body).to.contain('Book not found');
 });
 
 // Scenario: Authorized admin deletes a book successfully
@@ -66,8 +76,11 @@ Given('the user is logged in as "Admin"', () => {
 });
 
 When('the user sends a DELETE request to remove a book with a valid ID', () => {
-    books.deleteBook(bookData.id).then((res) => {
-        response = res;
+    books.getBooks().then((res) => {
+        const highestId = Math.max(...res.body.map(book => book.id));
+        books.deleteBook(highestId).then((deleteRes) => {
+            response = deleteRes;
+        });
     });
 });
 
@@ -81,15 +94,19 @@ Given('the user is logged in as "User"', () => {
 });
 
 When('the user sends a DELETE request to remove a book with a valid ID', () => {
-    books.deleteBook(bookData.id).then((res) => {
-        response = res;
+    books.getBooks().then((res) => {
+        const highestId = Math.max(...res.body.map(book => book.id));
+        books.deleteBook(highestId).then((deleteRes) => {
+            response = deleteRes;
+        });
     });
 });
+
 
 Then('the response status should git be 403', () => {
     expect(response.status).to.eq(403);
 });
 
 And('the response message should indicate "User is not permitted."', () => {
-    expect(response.body.message).to.contain('User is not permitted.');
+    expect(response.body).to.contain('User is not permitted.');
 });
