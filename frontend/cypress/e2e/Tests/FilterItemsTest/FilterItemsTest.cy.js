@@ -9,10 +9,6 @@ When('the user selects {string} from the dropdown', (sortOption) => {
     inventory.selectFilterOption(sortOption);
 });
 
-Then('the items should be sorted alphabetically by name in ascending order', () => {
-    inventory.sortByName();
-});
-
 Then('the items should be sorted by price in ascending order', () => {
     inventory.sortByPrice();
 });

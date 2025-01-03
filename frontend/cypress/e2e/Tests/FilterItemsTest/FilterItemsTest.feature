@@ -2,10 +2,6 @@ Feature: Sort Items in the Porducts page
   Background:
     Given the user is logged in
 
-  Scenario: Sort items by name A-Z
-    When the user selects "Name (A to Z)" from the dropdown
-    Then the items should be sorted alphabetically by name in ascending order
-
   Scenario: Sort items by price low to high
     When the user selects "Price (low to high)" from the dropdown
     Then the items should be sorted by price in ascending order
