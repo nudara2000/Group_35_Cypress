@@ -20,13 +20,12 @@ const { defineConfig } = require("cypress");
 const createBundler = require("@bahmutov/cypress-esbuild-preprocessor");
 const { addCucumberPreprocessorPlugin } = require("@badeball/cypress-cucumber-preprocessor");
 const { createEsbuildPlugin } = require("@badeball/cypress-cucumber-preprocessor/esbuild");
-const cypressMochawesomeReporter = require("cypress-mochawesome-reporter").default;
 const cypressOnFix = require("cypress-on-fix");
 
 async function setupNodeEvents(on, config) {
   on = cypressOnFix(on);
 
-  cypressMochawesomeReporter(on);
+  require('cypress-mochawesome-reporter/plugin')(on)
 
   await addCucumberPreprocessorPlugin(on, config);
 
