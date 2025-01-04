@@ -1,6 +1,6 @@
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
 import CartPage from "../../Pages/CartPage/CartPage.cy";
-import Inventory from "../../Pages/inventoryPage/InventoryPage.cy";
+import Inventory from "../../Pages/InventoryPage/InventoryPage.cy";
 
 // Background step
 Given('the user is logged in as Standard User', () => {
