@@ -1,6 +1,6 @@
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
 import Inventory from "../../Pages/InventoryPage/InventoryPage.cy";
-import Checkout from "../../Pages/CheckPage/CheckPage.cy";
+import checkout from "../../Pages/CheckPage/CheckPage.cy";
 
 Given('the user is logged in', () => {
     cy.login('standard_user', 'secret_sauce');
@@ -48,7 +48,7 @@ When('the user proceeds to checkout overview with missing first name', () => {
 });
 
 Then('the user should see the following error message1', () => {
-    Checkout.verifyFormValidationError("Error: First Name is required");
+    checkout.verifyFormValidationError("Error: First Name is required");
 });
 
 // Scenario: Missing Last Name
@@ -61,7 +61,7 @@ When('the user proceeds to checkout overview with missing last name', () => {
 });
 
 Then('the user should see the following error message2', () => {
-    Checkout.verifyFormValidationError("Error: Last Name is required");
+    checkout.verifyFormValidationError("Error: Last Name is required");
 });
 
 // Scenario: Missing Postal Code
@@ -74,7 +74,7 @@ When('the user proceeds to checkout overview with missing postal code', () => {
 });
 
 Then('the user should see the following error message3', () => {
-    Checkout.verifyFormValidationError("Error: Postal Code is required");
+    checkout.verifyFormValidationError("Error: Postal Code is required");
 });
 
 // Scenario: Invalid Postal Code
