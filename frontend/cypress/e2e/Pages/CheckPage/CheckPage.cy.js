@@ -1,4 +1,4 @@
-class CheckoutPage {
+class CheckPage {
     visitCheckoutPage() {
         cy.url().should("include", "checkout-step-one.html");
       }
@@ -63,5 +63,5 @@ class CheckoutPage {
       }
   }
 
-const checkout = new CheckoutPage();
+const checkout = new CheckPage();
 export default checkout;
