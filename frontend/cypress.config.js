@@ -1,4 +1,4 @@
-// const cucumber = require("cypress-cucumber-preprocessor").default;
+
 // const { defineConfig } = require("cypress");
 // // const { addCucumberPreprocessorPlugin } = require('@badeball/cypress-cucumber-preprocessor');
 // // const createBundler = require('@bahmutov/cypress-esbuild-preprocessor');
@@ -15,7 +15,7 @@
 //   chromeWebSecurity: false,
 // });
 
-
+const cucumber = require("cypress-cucumber-preprocessor").default;
 const { defineConfig } = require("cypress");
 const cypressOnFix = require("cypress-on-fix");
 
