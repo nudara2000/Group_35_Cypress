@@ -3,3 +3,5 @@ node_modules
 videos/
 reports/
 screenshots/
+
+package-lock.json
