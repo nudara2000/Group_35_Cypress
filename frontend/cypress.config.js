@@ -40,7 +40,7 @@ async function setupNodeEvents(on, config) {
   return config;
 }
 
-export default defineConfig({
+module.exports = defineConfig({
   reporter: "cypress-mochawesome-reporter",
   reporterOptions: {
     charts: true,
