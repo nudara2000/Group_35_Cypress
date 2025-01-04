@@ -22,9 +22,51 @@ Given("User have a book with the following details:", (dataTable) => {
   });
 });
 
+Given("User have a book with the invalid data type in title:", (dataTable) => {
+  const invalidBook = dataTable.hashes()[0];
+  const book = {
+    id: parseInt(invalidBook.id),
+    title: invalidBook.title, // Leave the title as is, even if it's not a string
+    author: invalidBook.author ? invalidBook.author.replace(/"/g, "") : null, // Handle undefined author
+  };
+
+  // Attempt to add the book with an invalid title
+  Books.addBook(book).then((res) => {
+    response = res; // Store the response for validation
+  });
+});
+
+Given("User have a book with the invalid data type in id:", (dataTable) => {
+  const bookDetails = dataTable.hashes()[0];
+
+  // Construct the book data object
+  const bookData = {
+    id: bookDetails.id, // Invalid ID remains a string
+    title: bookDetails.title.replace(/"/g, ""),
+    author: bookDetails.Author.replace(/"/g, ""),
+  };
+
+  // Store the book data for use in the test
+  Cypress.env("invalidBook", bookData);
+});
+
+
 When("User insert the book into the database", () => {
   // POST request is already handled in the `Given` step when calling Books.addBook
 });
+
+When("User insert the book into the database with invalid data type", function () {});
+
+When("User insert the book into the database with invalid data type", () => {
+  const invalidBook = Cypress.env("invalidBook");
+
+  // Attempt to insert the book with an invalid ID
+  Books.addBook(invalidBook).then((res) => {
+    response = res; // Store the response for validation
+  });
+});
+
+
 
 Then("the book should be inserted into the database with the insert response {int}", (statusCode) => {
   expect(response.status).to.eq(statusCode); 

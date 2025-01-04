@@ -9,50 +9,40 @@ class CartPage {
     confirmCartIsEmpty() {
       cy.get('.cart_item').should('not.exist');
     }
-  
+
     varifyProductsInCart(productNames) {
       const products = Array.isArray(productNames) ? productNames : [productNames];
-  
+
       cy.get('.cart_item').should('have.length', products.length);
-  
+
       products.forEach((productName) => {
         cy.get('.cart_item').should('contain', productName);
       });
     }
+    emptyCart() {
+        cy.get('.cart_item').each(($el) => {
+            cy.wrap($el)
+                .find('button[data-test^="remove"]')
+                .click();
+        });
+    }
+
+    verifyItemPrice(itemName, expectedPrice) {
+      cy.get('.cart_item')
+          .contains(itemName)
+          .parents('.cart_item')
+          .find('.inventory_item_price')
+          .should('contain.text', expectedPrice);
+  }
   
     verifyCartBadgeCount(expectedCount) {
       cy.get('.shopping_cart_badge').should('have.text', String(expectedCount));
     }
-  
-    selectSortingOption(optionText) {
-      cy.get('.product_sort_container').select(optionText);
-    }
-  
-    validateSortByName() {
-      cy.get('.inventory_item_name')
-        .then(($items) => {
-          const names = $items.map((_, el) => Cypress.$(el).text()).get();
-          const sortedNames = [...names].sort();
-          expect(names).to.deep.equal(sortedNames);
-        });
-    }
-  
-    validateSortByPrice() {
-      cy.get('.inventory_item_price')
-        .then(($prices) => {
-          const prices = $prices
-            .map((_, el) => parseFloat(Cypress.$(el).text()))
-            .get();
-          const sortedPrices = [...prices].sort((a, b) => a - b);
-          expect(prices).to.deep.equal(sortedPrices);
-        });
-    }
-
     clickCheckoutButton() {
         cy.get('button[data-test="checkout"]').click();
     }
   }
 
-  
+
 const cart = new CartPage();
 export default cart;

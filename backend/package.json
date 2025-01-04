@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "cypress open"
+    "test": "cypress run",
+    "server": "nohup java -jar libs/demo-0.0.1-SNAPSHOT.jar"
   },
   "author": "",
   "license": "ISC",
