@@ -1,6 +1,7 @@
 node_modules
-.Ds_Store
 
+videos/
 reports/
 screenshots/
-videos/
+
+package-lock.json
