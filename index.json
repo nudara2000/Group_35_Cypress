@@ -12,13 +12,13 @@
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false,
-    "start": "2025-01-05T02:19:37.599Z",
-    "end": "2025-01-05T02:21:12.260Z",
-    "duration": 94661
+    "start": "2025-01-05T02:23:12.261Z",
+    "end": "2025-01-05T02:24:47.879Z",
+    "duration": 95618
   },
   "results": [
     {
-      "uuid": "1d1115b3-1411-444d-824f-bdd21b7d4dc4",
+      "uuid": "4af3a64b-adc8-43c9-bce6-27f0e2044902",
       "title": "",
       "fullFile": "cypress/e2e/Tests/CartPageTest/CartPageTest.feature",
       "file": "cypress/e2e/Tests/CartPageTest/CartPageTest.feature",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "2840a828-1632-45ff-80b1-ffe6b3201123",
+          "uuid": "7625ebde-10d5-4b58-8abd-cdede4c25c3c",
           "title": "Cart Page Testing",
           "fullFile": "cypress/e2e/Tests/CartPageTest/CartPageTest.feature",
           "file": "cypress/e2e/Tests/CartPageTest/CartPageTest.feature",
@@ -38,7 +38,7 @@
               "title": "Adding an item to the cart",
               "fullTitle": "Cart Page Testing Adding an item to the cart",
               "timedOut": null,
-              "duration": 1178,
+              "duration": 1183,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "d35a0e32-c972-43c9-8d84-f7b43cf6f866",
-              "parentUUID": "2840a828-1632-45ff-80b1-ffe6b3201123",
+              "uuid": "28931d1e-7c24-4400-b609-66b7cfb808a9",
+              "parentUUID": "7625ebde-10d5-4b58-8abd-cdede4c25c3c",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Remove a product from the cart",
               "fullTitle": "Cart Page Testing Remove a product from the cart",
               "timedOut": null,
-              "duration": 1135,
+              "duration": 1157,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,21 +65,21 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "4fedebb1-9e46-4138-888b-8971e0bed530",
-              "parentUUID": "2840a828-1632-45ff-80b1-ffe6b3201123",
+              "uuid": "db1ac34b-d169-4243-9886-c4554c5115f6",
+              "parentUUID": "7625ebde-10d5-4b58-8abd-cdede4c25c3c",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "d35a0e32-c972-43c9-8d84-f7b43cf6f866",
-            "4fedebb1-9e46-4138-888b-8971e0bed530"
+            "28931d1e-7c24-4400-b609-66b7cfb808a9",
+            "db1ac34b-d169-4243-9886-c4554c5115f6"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 2313,
+          "duration": 2340,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -95,7 +95,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "78a073b9-6fcf-4553-8339-f374ada76311",
+      "uuid": "b9e4bb64-a22b-49b6-8e09-4196c1205377",
       "title": "",
       "fullFile": "cypress/e2e/Tests/CheckOutConfirmTest/CheckOutConfirmTest.feature",
       "file": "cypress/e2e/Tests/CheckOutConfirmTest/CheckOutConfirmTest.feature",
@@ -104,7 +104,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "0c0867d1-b2c2-4428-9977-8dba5580d0c8",
+          "uuid": "cb3abec0-37de-4d5f-b291-7d2d59b46a44",
           "title": "Checkout: Order Completion",
           "fullFile": "cypress/e2e/Tests/CheckOutConfirmTest/CheckOutConfirmTest.feature",
           "file": "cypress/e2e/Tests/CheckOutConfirmTest/CheckOutConfirmTest.feature",
@@ -115,7 +115,7 @@
               "title": "User adds an item to the cart",
               "fullTitle": "Checkout: Order Completion User adds an item to the cart",
               "timedOut": null,
-              "duration": 1183,
+              "duration": 1253,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -124,8 +124,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "699551db-b89b-4470-8779-261664d79bbd",
-              "parentUUID": "0c0867d1-b2c2-4428-9977-8dba5580d0c8",
+              "uuid": "6e46d3dd-7d09-4755-bd0f-cef50a481e83",
+              "parentUUID": "cb3abec0-37de-4d5f-b291-7d2d59b46a44",
               "isHook": false,
               "skipped": false
             },
@@ -133,7 +133,7 @@
               "title": "User proceeds to checkout and Confirm the Order",
               "fullTitle": "Checkout: Order Completion User proceeds to checkout and Confirm the Order",
               "timedOut": null,
-              "duration": 1949,
+              "duration": 2007,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -142,21 +142,21 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "27aa4572-60c5-4ddb-ba8c-df1186298b2e",
-              "parentUUID": "0c0867d1-b2c2-4428-9977-8dba5580d0c8",
+              "uuid": "46f756e9-e06f-4adf-800d-6aea3277044f",
+              "parentUUID": "cb3abec0-37de-4d5f-b291-7d2d59b46a44",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "699551db-b89b-4470-8779-261664d79bbd",
-            "27aa4572-60c5-4ddb-ba8c-df1186298b2e"
+            "6e46d3dd-7d09-4755-bd0f-cef50a481e83",
+            "46f756e9-e06f-4adf-800d-6aea3277044f"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 3132,
+          "duration": 3260,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -172,7 +172,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "7cefabb3-ac60-4332-8bdd-543b4fce51ac",
+      "uuid": "d82b2170-851e-4744-ad17-01e59d353ba3",
       "title": "",
       "fullFile": "cypress/e2e/Tests/CheckOutInfoTest/CheckOutInfoTest.feature",
       "file": "cypress/e2e/Tests/CheckOutInfoTest/CheckOutInfoTest.feature",
@@ -181,7 +181,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "b0f9dc16-2b0a-4d52-bc7a-423554bf8029",
+          "uuid": "93a1c6ae-770f-4f4d-9711-0ac24650ae10",
           "title": "Checkout: Your Information Form Validation",
           "fullFile": "cypress/e2e/Tests/CheckOutInfoTest/CheckOutInfoTest.feature",
           "file": "cypress/e2e/Tests/CheckOutInfoTest/CheckOutInfoTest.feature",
@@ -192,7 +192,7 @@
               "title": "Valid Information Submission",
               "fullTitle": "Checkout: Your Information Form Validation Valid Information Submission",
               "timedOut": null,
-              "duration": 1878,
+              "duration": 1866,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -201,8 +201,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "ec53e6c8-aab8-47e5-8898-f4ced5e283ac",
-              "parentUUID": "b0f9dc16-2b0a-4d52-bc7a-423554bf8029",
+              "uuid": "27520dc7-8a1a-414f-a47e-babf08850def",
+              "parentUUID": "93a1c6ae-770f-4f4d-9711-0ac24650ae10",
               "isHook": false,
               "skipped": false
             },
@@ -210,7 +210,7 @@
               "title": "Missing First Name",
               "fullTitle": "Checkout: Your Information Form Validation Missing First Name",
               "timedOut": null,
-              "duration": 1639,
+              "duration": 1645,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -219,8 +219,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "e7e365eb-cb98-4624-9542-03381f2684c2",
-              "parentUUID": "b0f9dc16-2b0a-4d52-bc7a-423554bf8029",
+              "uuid": "a288032f-800c-46af-bf2a-07ee8df6efe2",
+              "parentUUID": "93a1c6ae-770f-4f4d-9711-0ac24650ae10",
               "isHook": false,
               "skipped": false
             },
@@ -228,7 +228,7 @@
               "title": "Missing Last Name",
               "fullTitle": "Checkout: Your Information Form Validation Missing Last Name",
               "timedOut": null,
-              "duration": 1574,
+              "duration": 1557,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -237,8 +237,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "590abeb6-7a34-4a8c-a798-892422638306",
-              "parentUUID": "b0f9dc16-2b0a-4d52-bc7a-423554bf8029",
+              "uuid": "49cd195d-e3ac-4507-a7bd-45218e6e5d6f",
+              "parentUUID": "93a1c6ae-770f-4f4d-9711-0ac24650ae10",
               "isHook": false,
               "skipped": false
             },
@@ -246,7 +246,7 @@
               "title": "Missing Postal Code",
               "fullTitle": "Checkout: Your Information Form Validation Missing Postal Code",
               "timedOut": null,
-              "duration": 1546,
+              "duration": 1520,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -255,8 +255,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "b1de8e22-0e44-4e10-bdbd-b200ba6f8384",
-              "parentUUID": "b0f9dc16-2b0a-4d52-bc7a-423554bf8029",
+              "uuid": "4b1d6c08-0c4a-45ec-ba27-ded8ff9515a4",
+              "parentUUID": "93a1c6ae-770f-4f4d-9711-0ac24650ae10",
               "isHook": false,
               "skipped": false
             },
@@ -264,7 +264,7 @@
               "title": "Invalid Postal Code",
               "fullTitle": "Checkout: Your Information Form Validation Invalid Postal Code",
               "timedOut": null,
-              "duration": 5764,
+              "duration": 5720,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -277,8 +277,8 @@
                 "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[data-test=\"error\"]`, but never found it.\n    at CheckPage.verifyFormValidationError (cypress/e2e/Pages/CheckPage/CheckPage.cy.js:36:11)\n    at Context.eval (cypress/e2e/Tests/CheckOutInfoTest/CheckOutInfoTest.cy.js:90:13)\n    at Context.resolveAndRunStepDefinition (node_modules/cypress-cucumber-preprocessor/lib/resolveStepDefinition.js:193:0)\n    at Context.eval (node_modules/cypress-cucumber-preprocessor/lib/createTestFromScenario.js:27:0)",
                 "diff": null
               },
-              "uuid": "085daf4f-b6e2-40ec-95fa-9e0ab1a90ac4",
-              "parentUUID": "b0f9dc16-2b0a-4d52-bc7a-423554bf8029",
+              "uuid": "b147ab26-fa6d-4896-aa1d-913e2b2a4834",
+              "parentUUID": "93a1c6ae-770f-4f4d-9711-0ac24650ae10",
               "isHook": false,
               "skipped": false
             },
@@ -286,7 +286,7 @@
               "title": "Cancel the process",
               "fullTitle": "Checkout: Your Information Form Validation Cancel the process",
               "timedOut": null,
-              "duration": 1062,
+              "duration": 1066,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -295,26 +295,26 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "1d324871-8d79-4dd4-920f-e4ca399e5fdb",
-              "parentUUID": "b0f9dc16-2b0a-4d52-bc7a-423554bf8029",
+              "uuid": "61c82777-8513-4636-b0a2-8690a9f63b3a",
+              "parentUUID": "93a1c6ae-770f-4f4d-9711-0ac24650ae10",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "ec53e6c8-aab8-47e5-8898-f4ced5e283ac",
-            "e7e365eb-cb98-4624-9542-03381f2684c2",
-            "590abeb6-7a34-4a8c-a798-892422638306",
-            "b1de8e22-0e44-4e10-bdbd-b200ba6f8384",
-            "1d324871-8d79-4dd4-920f-e4ca399e5fdb"
+            "27520dc7-8a1a-414f-a47e-babf08850def",
+            "a288032f-800c-46af-bf2a-07ee8df6efe2",
+            "49cd195d-e3ac-4507-a7bd-45218e6e5d6f",
+            "4b1d6c08-0c4a-45ec-ba27-ded8ff9515a4",
+            "61c82777-8513-4636-b0a2-8690a9f63b3a"
           ],
           "failures": [
-            "085daf4f-b6e2-40ec-95fa-9e0ab1a90ac4"
+            "b147ab26-fa6d-4896-aa1d-913e2b2a4834"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 13463,
+          "duration": 13374,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -330,7 +330,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "e7e27a90-06fd-41f7-bdf0-d50b83f2e454",
+      "uuid": "08b4c47d-8485-4638-9f27-3f77bafb1fb4",
       "title": "",
       "fullFile": "cypress/e2e/Tests/CheckOutTest/CheckOutTest.feature",
       "file": "cypress/e2e/Tests/CheckOutTest/CheckOutTest.feature",
@@ -339,7 +339,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "56645d0c-11fc-48cd-986e-669431dae852",
+          "uuid": "1b89b6e6-6577-4379-9be5-a094b8b0e2fb",
           "title": "Checkout Overview Testing",
           "fullFile": "cypress/e2e/Tests/CheckOutTest/CheckOutTest.feature",
           "file": "cypress/e2e/Tests/CheckOutTest/CheckOutTest.feature",
@@ -350,7 +350,7 @@
               "title": "Checkout with no items",
               "fullTitle": "Checkout Overview Testing Checkout with no items",
               "timedOut": null,
-              "duration": 1808,
+              "duration": 1799,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -359,8 +359,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "45629f0f-76a2-4f1c-9c18-d4ddad11fb01",
-              "parentUUID": "56645d0c-11fc-48cd-986e-669431dae852",
+              "uuid": "4f5a116f-838a-402a-ac6e-125cbbe0217d",
+              "parentUUID": "1b89b6e6-6577-4379-9be5-a094b8b0e2fb",
               "isHook": false,
               "skipped": false
             },
@@ -368,7 +368,7 @@
               "title": "Checkout with 1 item",
               "fullTitle": "Checkout Overview Testing Checkout with 1 item",
               "timedOut": null,
-              "duration": 1709,
+              "duration": 1723,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -377,8 +377,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "1e76f36e-4584-445f-8429-7e0ab46d6984",
-              "parentUUID": "56645d0c-11fc-48cd-986e-669431dae852",
+              "uuid": "86a9f599-35e9-4f58-8ec8-0dac0e6ec441",
+              "parentUUID": "1b89b6e6-6577-4379-9be5-a094b8b0e2fb",
               "isHook": false,
               "skipped": false
             },
@@ -386,7 +386,7 @@
               "title": "Checkout with Multiple items",
               "fullTitle": "Checkout Overview Testing Checkout with Multiple items",
               "timedOut": null,
-              "duration": 1883,
+              "duration": 1866,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -395,22 +395,22 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "986df586-5083-46ea-afd0-67b03ed2084d",
-              "parentUUID": "56645d0c-11fc-48cd-986e-669431dae852",
+              "uuid": "f5c49139-8869-4843-9864-88afe2c4ea0a",
+              "parentUUID": "1b89b6e6-6577-4379-9be5-a094b8b0e2fb",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "45629f0f-76a2-4f1c-9c18-d4ddad11fb01",
-            "1e76f36e-4584-445f-8429-7e0ab46d6984",
-            "986df586-5083-46ea-afd0-67b03ed2084d"
+            "4f5a116f-838a-402a-ac6e-125cbbe0217d",
+            "86a9f599-35e9-4f58-8ec8-0dac0e6ec441",
+            "f5c49139-8869-4843-9864-88afe2c4ea0a"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 5400,
+          "duration": 5388,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -426,7 +426,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "4693246d-f804-4826-85b7-fcc252406005",
+      "uuid": "57856067-d87e-40ab-ba69-3005ea35c77b",
       "title": "",
       "fullFile": "cypress/e2e/Tests/FilterItemsTest/FilterItemsTest.feature",
       "file": "cypress/e2e/Tests/FilterItemsTest/FilterItemsTest.feature",
@@ -435,7 +435,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "0957e649-fc38-4e87-9660-94dda4bcc99f",
+          "uuid": "ce21d6c9-5f5d-47bb-9e5c-8df46564be86",
           "title": "Sort Items in the Porducts page",
           "fullFile": "cypress/e2e/Tests/FilterItemsTest/FilterItemsTest.feature",
           "file": "cypress/e2e/Tests/FilterItemsTest/FilterItemsTest.feature",
@@ -446,7 +446,7 @@
               "title": "Sort items by price low to high",
               "fullTitle": "Sort Items in the Porducts page Sort items by price low to high",
               "timedOut": null,
-              "duration": 1129,
+              "duration": 1191,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -455,8 +455,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "c2436ae7-70be-4119-b1fd-f2de6c6b061f",
-              "parentUUID": "0957e649-fc38-4e87-9660-94dda4bcc99f",
+              "uuid": "c48fa972-30c2-406f-be5b-7a184aba1b8b",
+              "parentUUID": "ce21d6c9-5f5d-47bb-9e5c-8df46564be86",
               "isHook": false,
               "skipped": false
             },
@@ -464,7 +464,7 @@
               "title": "Sort items by name Z-A",
               "fullTitle": "Sort Items in the Porducts page Sort items by name Z-A",
               "timedOut": null,
-              "duration": 925,
+              "duration": 960,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -473,8 +473,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "e362dce7-62a4-4b63-b02a-67dc7609e842",
-              "parentUUID": "0957e649-fc38-4e87-9660-94dda4bcc99f",
+              "uuid": "0f731732-c68a-4dbf-92dc-3de81d03de96",
+              "parentUUID": "ce21d6c9-5f5d-47bb-9e5c-8df46564be86",
               "isHook": false,
               "skipped": false
             },
@@ -482,7 +482,7 @@
               "title": "Sort items by price high to low",
               "fullTitle": "Sort Items in the Porducts page Sort items by price high to low",
               "timedOut": null,
-              "duration": 855,
+              "duration": 857,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -491,22 +491,22 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "b2a3c8fa-91e1-4f5e-8e4f-2e1997908c8e",
-              "parentUUID": "0957e649-fc38-4e87-9660-94dda4bcc99f",
+              "uuid": "d67b5e45-2145-40a0-a32c-e5e3426e0cf6",
+              "parentUUID": "ce21d6c9-5f5d-47bb-9e5c-8df46564be86",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "c2436ae7-70be-4119-b1fd-f2de6c6b061f",
-            "e362dce7-62a4-4b63-b02a-67dc7609e842",
-            "b2a3c8fa-91e1-4f5e-8e4f-2e1997908c8e"
+            "c48fa972-30c2-406f-be5b-7a184aba1b8b",
+            "0f731732-c68a-4dbf-92dc-3de81d03de96",
+            "d67b5e45-2145-40a0-a32c-e5e3426e0cf6"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 2909,
+          "duration": 3008,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -522,7 +522,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "b0d21636-27ac-4eac-95df-5db12501ebce",
+      "uuid": "fa715ee8-1da6-45de-9d9f-b4a0684314dd",
       "title": "",
       "fullFile": "cypress/e2e/Tests/LoginTest/LoginTest.feature",
       "file": "cypress/e2e/Tests/LoginTest/LoginTest.feature",
@@ -531,7 +531,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "56174f8b-d7e4-4d1e-97fc-ea3bdca56341",
+          "uuid": "005690bc-660c-4f1f-9ef9-a0c94351d02b",
           "title": "User want to login into the site with valid data",
           "fullFile": "cypress/e2e/Tests/LoginTest/LoginTest.feature",
           "file": "cypress/e2e/Tests/LoginTest/LoginTest.feature",
@@ -542,7 +542,7 @@
               "title": "Login as standard_user with valid data",
               "fullTitle": "User want to login into the site with valid data Login as standard_user with valid data",
               "timedOut": null,
-              "duration": 979,
+              "duration": 983,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -551,8 +551,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "fc4ae35b-93b5-4bcf-9677-e75c50e3cfa3",
-              "parentUUID": "56174f8b-d7e4-4d1e-97fc-ea3bdca56341",
+              "uuid": "51cddb40-bfd8-4c3a-ace6-0c375c17f59f",
+              "parentUUID": "005690bc-660c-4f1f-9ef9-a0c94351d02b",
               "isHook": false,
               "skipped": false
             },
@@ -560,7 +560,7 @@
               "title": "Login as locked out user with valid data",
               "fullTitle": "User want to login into the site with valid data Login as locked out user with valid data",
               "timedOut": null,
-              "duration": 813,
+              "duration": 817,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -569,21 +569,21 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "4d4888eb-b98d-43c2-b395-93786ca8e856",
-              "parentUUID": "56174f8b-d7e4-4d1e-97fc-ea3bdca56341",
+              "uuid": "af1c6564-f03b-4eed-a32c-f378a80c0b51",
+              "parentUUID": "005690bc-660c-4f1f-9ef9-a0c94351d02b",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "fc4ae35b-93b5-4bcf-9677-e75c50e3cfa3",
-            "4d4888eb-b98d-43c2-b395-93786ca8e856"
+            "51cddb40-bfd8-4c3a-ace6-0c375c17f59f",
+            "af1c6564-f03b-4eed-a32c-f378a80c0b51"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1792,
+          "duration": 1800,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -599,7 +599,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "f7a409c4-d47a-404d-b4c3-5bf90f6903c2",
+      "uuid": "7e63a6ac-9416-4f11-9ffd-07789bf9c31a",
       "title": "",
       "fullFile": "cypress/e2e/Tests/LogoutTest/LogoutTest.feature",
       "file": "cypress/e2e/Tests/LogoutTest/LogoutTest.feature",
@@ -608,7 +608,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "18d6bb5a-fd7e-4da4-b433-7b4ebe9e33e3",
+          "uuid": "2985cc42-b221-4ba3-be8e-b9bfc384026d",
           "title": "Access pages after logout",
           "fullFile": "cypress/e2e/Tests/LogoutTest/LogoutTest.feature",
           "file": "cypress/e2e/Tests/LogoutTest/LogoutTest.feature",
@@ -619,7 +619,7 @@
               "title": "User tries to access the restricited page after logout",
               "fullTitle": "Access pages after logout User tries to access the restricited page after logout",
               "timedOut": null,
-              "duration": 1806,
+              "duration": 1958,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -628,20 +628,20 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "004d693f-bb82-437e-a3d2-3ce17560f92a",
-              "parentUUID": "18d6bb5a-fd7e-4da4-b433-7b4ebe9e33e3",
+              "uuid": "f354a58d-d712-4b7f-9ec3-68995adfb4d5",
+              "parentUUID": "2985cc42-b221-4ba3-be8e-b9bfc384026d",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "004d693f-bb82-437e-a3d2-3ce17560f92a"
+            "f354a58d-d712-4b7f-9ec3-68995adfb4d5"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1806,
+          "duration": 1958,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -657,7 +657,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "02016d96-9cbc-4463-84d7-568a5e315dec",
+      "uuid": "99f55d17-c8f3-4488-9541-049c12db67c0",
       "title": "",
       "fullFile": "cypress/e2e/Tests/ProductDetailsTest/ProductDetails.feature",
       "file": "cypress/e2e/Tests/ProductDetailsTest/ProductDetails.feature",
@@ -666,7 +666,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "a0807f69-dbf3-4767-b02c-c7daa829958d",
+          "uuid": "d97ad709-23fc-4ffc-8374-f26a54ee1061",
           "title": "After Selecting an item from the product list, the user should be able to view the product details page",
           "fullFile": "cypress/e2e/Tests/ProductDetailsTest/ProductDetails.feature",
           "file": "cypress/e2e/Tests/ProductDetailsTest/ProductDetails.feature",
@@ -677,7 +677,7 @@
               "title": "User should be able to view the product details page",
               "fullTitle": "After Selecting an item from the product list, the user should be able to view the product details page User should be able to view the product details page",
               "timedOut": null,
-              "duration": 5205,
+              "duration": 5241,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -690,8 +690,8 @@
                 "estack": "AssertionError: Timed out retrying after 4000ms: expected '<div.inventory_details_name.large_size>' to have text 'Sauce Labs Backpack', but the text was 'Sauce Labs Fleece Jacket'\n    at Context.eval (cypress/e2e/Tests/ProductDetailsTest/ProductDetails.cy.js:17:39)\n    at Context.resolveAndRunStepDefinition (node_modules/cypress-cucumber-preprocessor/lib/resolveStepDefinition.js:193:0)\n    at Context.eval (node_modules/cypress-cucumber-preprocessor/lib/createTestFromScenario.js:27:0)",
                 "diff": "- 'Sauce Labs Fleece Jacket'\n+ 'Sauce Labs Backpack'\n"
               },
-              "uuid": "eaba64d1-245e-40db-8057-8e5f52aff8be",
-              "parentUUID": "a0807f69-dbf3-4767-b02c-c7daa829958d",
+              "uuid": "5b55cc88-ac83-46e0-9cb2-7da3be44057f",
+              "parentUUID": "d97ad709-23fc-4ffc-8374-f26a54ee1061",
               "isHook": false,
               "skipped": false
             },
@@ -699,7 +699,7 @@
               "title": "Add product to the cart",
               "fullTitle": "After Selecting an item from the product list, the user should be able to view the product details page Add product to the cart",
               "timedOut": null,
-              "duration": 5089,
+              "duration": 5102,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -712,8 +712,8 @@
                 "estack": "AssertionError: Timed out retrying after 4000ms: expected '<div.inventory_details_name.large_size>' to have text 'Sauce Labs Backpack', but the text was 'Sauce Labs Fleece Jacket'\n    at Context.eval (cypress/e2e/Tests/ProductDetailsTest/ProductDetails.cy.js:17:39)\n    at Context.resolveAndRunStepDefinition (node_modules/cypress-cucumber-preprocessor/lib/resolveStepDefinition.js:193:0)\n    at Context.eval (node_modules/cypress-cucumber-preprocessor/lib/createTestFromScenario.js:27:0)",
                 "diff": "- 'Sauce Labs Fleece Jacket'\n+ 'Sauce Labs Backpack'\n"
               },
-              "uuid": "6c2342f5-c002-44b7-ab0c-86c277fb6322",
-              "parentUUID": "a0807f69-dbf3-4767-b02c-c7daa829958d",
+              "uuid": "f6780807-5a35-4791-b0e4-95c27b328f46",
+              "parentUUID": "d97ad709-23fc-4ffc-8374-f26a54ee1061",
               "isHook": false,
               "skipped": false
             }
@@ -721,12 +721,12 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "eaba64d1-245e-40db-8057-8e5f52aff8be",
-            "6c2342f5-c002-44b7-ab0c-86c277fb6322"
+            "5b55cc88-ac83-46e0-9cb2-7da3be44057f",
+            "f6780807-5a35-4791-b0e4-95c27b328f46"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 10294,
+          "duration": 10343,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -742,7 +742,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "3caf9c5c-4d70-4db3-8799-1de945d6543f",
+      "uuid": "b58468b2-1b2c-4718-861d-e029eeb24028",
       "title": "",
       "fullFile": "cypress/e2e/Tests/ProductListTest/ProductList.feature",
       "file": "cypress/e2e/Tests/ProductListTest/ProductList.feature",
@@ -751,7 +751,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "13f062f2-eb2c-41af-b25f-a73f91959111",
+          "uuid": "26721080-6c0f-4f59-b92f-e2d21743fc74",
           "title": "User wants to ensure the product list loads correctly",
           "fullFile": "cypress/e2e/Tests/ProductListTest/ProductList.feature",
           "file": "cypress/e2e/Tests/ProductListTest/ProductList.feature",
@@ -762,7 +762,7 @@
               "title": "Verify Product list should load correctly",
               "fullTitle": "User wants to ensure the product list loads correctly Verify Product list should load correctly",
               "timedOut": null,
-              "duration": 1018,
+              "duration": 1039,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -771,8 +771,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "c8bc0886-da44-41ef-b2e5-b478079ad847",
-              "parentUUID": "13f062f2-eb2c-41af-b25f-a73f91959111",
+              "uuid": "92fd02fa-06e3-44df-99b9-0038ee976bcf",
+              "parentUUID": "26721080-6c0f-4f59-b92f-e2d21743fc74",
               "isHook": false,
               "skipped": false
             },
@@ -780,7 +780,7 @@
               "title": "Verify Product Items Have  Name, Price,Description and Image",
               "fullTitle": "User wants to ensure the product list loads correctly Verify Product Items Have  Name, Price,Description and Image",
               "timedOut": null,
-              "duration": 920,
+              "duration": 937,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -789,8 +789,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "033875c7-9d0c-4a86-afbf-ccf9941a0ebb",
-              "parentUUID": "13f062f2-eb2c-41af-b25f-a73f91959111",
+              "uuid": "3a46b116-36a1-4108-b279-e91170a142c3",
+              "parentUUID": "26721080-6c0f-4f59-b92f-e2d21743fc74",
               "isHook": false,
               "skipped": false
             },
@@ -807,22 +807,22 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "81158cf3-499b-418a-8028-d8d816e449d7",
-              "parentUUID": "13f062f2-eb2c-41af-b25f-a73f91959111",
+              "uuid": "aed6cdda-1727-47e7-aca9-d5d34783a725",
+              "parentUUID": "26721080-6c0f-4f59-b92f-e2d21743fc74",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "c8bc0886-da44-41ef-b2e5-b478079ad847",
-            "033875c7-9d0c-4a86-afbf-ccf9941a0ebb",
-            "81158cf3-499b-418a-8028-d8d816e449d7"
+            "92fd02fa-06e3-44df-99b9-0038ee976bcf",
+            "3a46b116-36a1-4108-b279-e91170a142c3",
+            "aed6cdda-1727-47e7-aca9-d5d34783a725"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 2778,
+          "duration": 2816,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -838,7 +838,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "41a39122-6624-448f-b028-5d93f9e9d34a",
+      "uuid": "4ca5b5c0-ba1e-4af4-a3a7-a2bcc097d7e3",
       "title": "",
       "fullFile": "cypress/e2e/Tests/AddItemsTest/AddItemsTest.feature",
       "file": "cypress/e2e/Tests/AddItemsTest/AddItemsTest.feature",
@@ -847,7 +847,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "7a9c4285-a96e-4385-9442-dddcdfac1951",
+          "uuid": "ca6d6cf8-3512-4624-acdf-b7fafc1a4c14",
           "title": "Add Items to Shopping Cart",
           "fullFile": "cypress/e2e/Tests/AddItemsTest/AddItemsTest.feature",
           "file": "cypress/e2e/Tests/AddItemsTest/AddItemsTest.feature",
@@ -858,7 +858,7 @@
               "title": "Add a single item to the cart",
               "fullTitle": "Add Items to Shopping Cart Add a single item to the cart",
               "timedOut": null,
-              "duration": 1983,
+              "duration": 1800,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -867,8 +867,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "7066a258-5658-4069-9f2b-4353de6c7ec6",
-              "parentUUID": "7a9c4285-a96e-4385-9442-dddcdfac1951",
+              "uuid": "19f8889a-a0b4-4840-91a3-f86a74cdb780",
+              "parentUUID": "ca6d6cf8-3512-4624-acdf-b7fafc1a4c14",
               "isHook": false,
               "skipped": false
             },
@@ -876,7 +876,7 @@
               "title": "Add multiple items to the cart",
               "fullTitle": "Add Items to Shopping Cart Add multiple items to the cart",
               "timedOut": null,
-              "duration": 1107,
+              "duration": 1129,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -885,21 +885,21 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "6bd676c7-eec0-4760-93da-72b0d94dbbe2",
-              "parentUUID": "7a9c4285-a96e-4385-9442-dddcdfac1951",
+              "uuid": "50b01c5f-a17f-49c6-b446-4ec3ab1179f2",
+              "parentUUID": "ca6d6cf8-3512-4624-acdf-b7fafc1a4c14",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "7066a258-5658-4069-9f2b-4353de6c7ec6",
-            "6bd676c7-eec0-4760-93da-72b0d94dbbe2"
+            "19f8889a-a0b4-4840-91a3-f86a74cdb780",
+            "50b01c5f-a17f-49c6-b446-4ec3ab1179f2"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 3090,
+          "duration": 2929,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
