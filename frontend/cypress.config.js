@@ -14,7 +14,7 @@
 //   },
 //   chromeWebSecurity: false,
 // });
-// New code
+//
 
 const cucumber = require("cypress-cucumber-preprocessor").default;
 const { defineConfig } = require("cypress");
