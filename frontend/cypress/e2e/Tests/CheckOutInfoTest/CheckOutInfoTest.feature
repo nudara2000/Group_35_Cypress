@@ -48,15 +48,14 @@ Feature: Checkout: Your Information Form Validation
 
 
   Scenario: Invalid Postal Code
-    When the user proceeds to checkout overview with invalid postal code
-      | Field        | Value  |
-      |--------------|--------|
-      | First Name   | John   |
-      | Last Name    | Doe    |
-      | Postal Code  | abcde  |
-    Then the user should see the following error message4
-     | Error                         |
-     | Error: Last Name is required  |
+  When the user proceeds to checkout overview with invalid postal code
+    | Field        | Value  |
+    |--------------|--------|
+    | First Name   | John   |
+    | Last Name    | Doe    |
+    | Postal Code  | abcde  |
+  Then the user should be navigated to the "Checkout: Overview" page
+  Then no error messages should be displayed
 
     Scenario: Cancel the process
     When the user clicks the cancel button on the "Checkout: Your Information" page

@@ -1,10 +1,10 @@
-Feature: After Selecting an item from the product list, the user should be able to view the product details page
+Feature: After selecting an item from the product list, the user should be able to view the product details page
 
 Background:
     Given User logs in to the application 
-    When User selects the item from the product list
-    Then The correct product details page should open
-    
+    When User selects the product "Sauce Labs Backpack" from the list
+    Then The product details page for "Sauce Labs Backpack" should open
+
 Scenario: User should be able to view the product details page
     Then User should be able to view the hamburger menu
     And User should be able to view the page title

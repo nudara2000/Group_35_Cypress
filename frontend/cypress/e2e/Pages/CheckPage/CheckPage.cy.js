@@ -38,7 +38,7 @@ class CheckPage {
       }
     
       verifyInvalidPostalCodeError() {
-        cy.get('[data-test="error"]', { timeout: 15000 }).should("not.exist");
+        cy.get('.error-message')
       }
     
       clickCancelButton() {

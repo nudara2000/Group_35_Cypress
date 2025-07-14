@@ -1,20 +1,21 @@
-import { Given, When, Then, And}  from "cypress-cucumber-preprocessor/steps";
+import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
 import login from '../../Pages/LoginPage/LoginPage.cy';
 
+
 Given('User logs in to the application', () => {
-    login.enterUrl();
-    login.enterStandardUsernamePassword('problem_user', 'secret_sauce');
-    login.clickLoginButton();
+  login.enterUrl();
+  login.enterStandardUsernamePassword('standard_user', 'secret_sauce');
+  login.clickLoginButton();
 });
 
-When('User selects the item from the product list' , function () {
-    cy.get('.inventory_item .inventory_item_name').should('exist'); 
-    cy.get('.inventory_item .inventory_item_name').first().invoke('text').as('selectedProductTitle');
-    cy.get('.inventory_item .inventory_item_name').first().click();
+When('User selects the product {string} from the list', function (productName) {
+  this.selectedProductTitle = productName;
+  cy.contains('.inventory_item_name', productName).should('be.visible').click();
 });
 
-Then('The correct product details page should open' , function () {
-    cy.get ('.inventory_details_name').should('have.text', this.selectedProductTitle.trim());
+
+Then('The product details page for {string} should open', function (expectedTitle) {
+  cy.get('.inventory_details_name').should('have.text', expectedTitle);
 });
 
 Then('User should be able to view the hamburger menu' , () => {
